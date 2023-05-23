@@ -766,7 +766,10 @@ MonoBehaviour:
   obj: {fileID: 94336175}
   railObject: []
   speed: 2
+  maxSpeed: 25
+  minSpeed: 15
   startChild: 0
+  speedAutoIncrement: 1
 --- !u!1001 &98688823
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9175,7 +9178,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 320a826fe9dea3745875c53e962eb757, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 2.1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 320a826fe9dea3745875c53e962eb757, type: 3}
       propertyPath: m_LocalScale.y
@@ -14760,8 +14763,11 @@ MonoBehaviour:
     reverse: 0
   - parent: {fileID: 1736783022}
     reverse: 1
-  speed: 3
-  startChild: 1
+  speed: 10
+  maxSpeed: 20
+  minSpeed: 5
+  startChild: 15
+  speedAutoIncrement: 1
 --- !u!1001 &1873528679
 PrefabInstance:
   m_ObjectHideFlags: 0
