@@ -133,6 +133,7 @@
     <Compile Include="Assets\_Course Library\Scripts\Actions\LaunchProjectile.cs" />
     <Compile Include="Assets\Weapon\PyroParticles\Prefab\Script\FireConstantBaseScript.cs" />
     <Compile Include="Assets\_Course Library\Scripts\Actions\DestroyObject.cs" />
+    <Compile Include="Assets\Gun.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Crystal_Mine\Spline_Tool\Scripts\LICENSE.txt" />
