@@ -23,7 +23,7 @@ public class UserController : MonoBehaviour
         if (other.transform.tag == "monster")
         {
             hp -= 1;
-            Destroy(other.gameObject);
+            // Destroy(other.gameObject);
         }
     }
 
