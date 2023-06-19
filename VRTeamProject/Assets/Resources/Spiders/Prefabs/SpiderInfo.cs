@@ -33,7 +33,6 @@ public class SpiderInfo: MonoBehaviour
         script.enabled = false;
         ani.SetInteger("hp", 0);
         ani.SetBool("die", true);
-        ani.StopPlayback();
         Invoke("Destroys", 2);
     }
 
@@ -49,7 +48,7 @@ public class SpiderInfo: MonoBehaviour
             Debug.Log($"{other.gameObject.name}");
             ani.SetInteger("attack", ani.GetInteger("attack") + 1);
             script.speed = other.GetComponent<mineCartPath>().speed;
-            Invoke("Die", 2);
+            Invoke("Die", 1);
         }
     }
 }
