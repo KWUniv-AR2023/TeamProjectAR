@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Crystal_Mine\Spline_Tool\Editor\Trail_MeshEditor.cs" />
+    <Compile Include="Assets\Weapon\PyroParticles\Prefab\Editor\PyroParticlesEditor.cs" />
     <Compile Include="Assets\_Course Library\Source Files\Editor\XRSliderEditor.cs" />
     <Compile Include="Assets\_Course Library\Source Files\Editor\XRButtonEditor.cs" />
     <Compile Include="Assets\_Course Library\Source Files\Editor\XRJoystickEditor.cs" />

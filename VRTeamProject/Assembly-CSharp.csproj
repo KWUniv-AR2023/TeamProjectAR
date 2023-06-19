@@ -70,8 +70,10 @@
     <Compile Include="Assets\_Course Library\Scripts\Controls\XRLever.cs" />
     <Compile Include="Assets\_Course Library\Scripts\Actions\LookAtPlayer.cs" />
     <Compile Include="Assets\_Course Library\Scripts\Actions\RemoveObjectsWithTag.cs" />
+    <Compile Include="Assets\Weapon\PyroParticles\Prefab\Script\FireBaseScript.cs" />
     <Compile Include="Assets\_Course Library\Scripts\Actions\SpawnObject.cs" />
     <Compile Include="Assets\_Course Library\Scripts\Actions\SetMaterialColor.cs" />
+    <Compile Include="Assets\Weapon\PyroParticles\Prefab\Script\FireLightScript.cs" />
     <Compile Include="Assets\_Course Library\Scripts\Conditions\OnTimedInterval.cs" />
     <Compile Include="Assets\_Course Library\Scripts\Actions\PlayAnimation.cs" />
     <Compile Include="Assets\_Course Library\Scripts\Testing\TeleportAreaWithFade.cs" />
@@ -81,9 +83,11 @@
     <Compile Include="Assets\_Course Library\Scripts\Actions\SetVolume.cs" />
     <Compile Include="Assets\_Course Library\Scripts\Actions\LoadScene.cs" />
     <Compile Include="Assets\_Course Library\Scripts\Conditions\OnButtonPress.cs" />
+    <Compile Include="Assets\Mine\Models\Props\mineCartPath.cs" />
     <Compile Include="Assets\pixel horror low poly train carriage\scripits\PlayerController.cs" />
     <Compile Include="Assets\_Course Library\Scripts\Actions\TranslateObject.cs" />
     <Compile Include="Assets\_Course Library\Scripts\Actions\ToggleRay.cs" />
+    <Compile Include="Assets\Weapon\PyroParticles\Demo\DemoScript.cs" />
     <Compile Include="Assets\_Course Library\Scripts\Actions\PlayVideo.cs" />
     <Compile Include="Assets\_Course Library\Scripts\Conditions\OnVelocity.cs" />
     <Compile Include="Assets\pixel horror low poly train carriage\scripits\MouseLook.cs" />
@@ -91,9 +95,12 @@
     <Compile Include="Assets\_Course Library\Scripts\Actions\SetLightColor.cs" />
     <Compile Include="Assets\_Course Library\Scripts\Controls\XRSlider.cs" />
     <Compile Include="Assets\_Course Library\Scripts\Testing\Notes.cs" />
+    <Compile Include="Assets\SpiderManager.cs" />
     <Compile Include="Assets\Crystal_Mine\Spline_Tool\Scripts\Math_Functions.cs" />
+    <Compile Include="Assets\Weapon\PyroParticles\Prefab\Script\MeteorSwarmScript.cs" />
     <Compile Include="Assets\_Course Library\Scripts\Conditions\OnPull.cs" />
     <Compile Include="Assets\_Course Library\Scripts\Actions\TeleportPlayer.cs" />
+    <Compile Include="Assets\Weapon\PyroParticles\Prefab\Script\FireCollisionForwardScript.cs" />
     <Compile Include="Assets\_Course Library\Scripts\Actions\ManuallySelectObject.cs" />
     <Compile Include="Assets\_Course Library\Scripts\Conditions\OnSceneLoad.cs" />
     <Compile Include="Assets\_Course Library\Scripts\Actions\ToggleInterface.cs" />
@@ -104,6 +111,7 @@
     <Compile Include="Assets\_Course Library\Scripts\Actions\CreateTrail.cs" />
     <Compile Include="Assets\_Course Library\Scripts\Conditions\OnTilt.cs" />
     <Compile Include="Assets\_Course Library\Scripts\Actions\ToggleParticle.cs" />
+    <Compile Include="Assets\Weapon\Nokobot\Modern Guns - Handgun\_Demo Assets\SimpleShoot.cs" />
     <Compile Include="Assets\_Course Library\Scripts\Testing\TeleportAnchorWithFade.cs" />
     <Compile Include="Assets\Crystal_Mine\Spline_Tool\Scripts\Trail_Mesh.cs" />
     <Compile Include="Assets\_Course Library\Scripts\Actions\PlaySoundsFromList.cs" />
@@ -111,18 +119,27 @@
     <Compile Include="Assets\_Course Library\Scripts\Actions\ShowMessageFromList.cs" />
     <Compile Include="Assets\_Course Library\Scripts\Conditions\OnTrigger.cs" />
     <Compile Include="Assets\_Course Library\Scripts\Actions\SetInteractionLayer.cs" />
+    <Compile Include="Assets\Resources\Spiders\Prefabs\SpiderInfo.cs" />
+    <Compile Include="Assets\Weapon\PyroParticles\Prefab\Script\SingleLineAttribute.cs" />
     <Compile Include="Assets\_Course Library\Scripts\Controls\XRKnob.cs" />
     <Compile Include="Assets\_Course Library\Scripts\Actions\PlayQuickSound.cs" />
     <Compile Include="Assets\_Course Library\Scripts\Actions\ConvertValueToHue.cs" />
+    <Compile Include="Assets\Weapon\PyroParticles\Demo\DemoScriptEditor.cs" />
     <Compile Include="Assets\_Course Library\Scripts\Actions\StickToObject.cs" />
+    <Compile Include="Assets\Weapon\PyroParticles\Prefab\Script\FireProjectileScript.cs" />
     <Compile Include="Assets\_Course Library\Scripts\Actions\PlayContinuousSound.cs" />
     <Compile Include="Assets\_Course Library\Scripts\Actions\MatchRotation.cs" />
     <Compile Include="Assets\_Course Library\Scripts\Actions\LaunchProjectile.cs" />
+    <Compile Include="Assets\Weapon\PyroParticles\Prefab\Script\FireConstantBaseScript.cs" />
     <Compile Include="Assets\_Course Library\Scripts\Actions\DestroyObject.cs" />
-    <Compile Include="Assets\Mine\Models\Props\mineCartPath.cs" />
+    <Compile Include="Assets\UserController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Crystal_Mine\Spline_Tool\Scripts\LICENSE.txt" />
+    <None Include="Assets\Weapon\StaffOfPain\readme_first.txt" />
+    <None Include="Assets\Weapon\PyroParticles\Prefab\Materials\AdditiveTintable.shader" />
+    <None Include="Assets\Weapon\Nokobot\Modern Guns - Handgun\README.txt" />
+    <None Include="Assets\Weapon\PyroParticles\Readme.txt" />
     <None Include="Assets\_Course Library\Licenses.txt" />
     <None Include="Assets\pixel horror low poly train carriage\scripits\read me.txt" />
   </ItemGroup>
