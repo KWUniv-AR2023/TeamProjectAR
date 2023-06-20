@@ -116,6 +116,7 @@
     <Compile Include="Assets\_Course Library\Scripts\Testing\TeleportAnchorWithFade.cs" />
     <Compile Include="Assets\Crystal_Mine\Spline_Tool\Scripts\Trail_Mesh.cs" />
     <Compile Include="Assets\_Course Library\Scripts\Actions\PlaySoundsFromList.cs" />
+    <Compile Include="Assets\BossController.cs" />
     <Compile Include="Assets\_Course Library\Scripts\Actions\ToggleLight.cs" />
     <Compile Include="Assets\_Course Library\Scripts\Actions\ShowMessageFromList.cs" />
     <Compile Include="Assets\_Course Library\Scripts\Conditions\OnTrigger.cs" />
@@ -133,7 +134,6 @@
     <Compile Include="Assets\_Course Library\Scripts\Actions\LaunchProjectile.cs" />
     <Compile Include="Assets\Weapon\PyroParticles\Prefab\Script\FireConstantBaseScript.cs" />
     <Compile Include="Assets\_Course Library\Scripts\Actions\DestroyObject.cs" />
-    <Compile Include="Assets\BossController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Crystal_Mine\Spline_Tool\Scripts\LICENSE.txt" />

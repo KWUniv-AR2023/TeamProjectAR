@@ -7,6 +7,7 @@ public class SpiderInfo: MonoBehaviour
     public int hp = 100;
     Animator ani;
     mineCartPath script;
+    public bool touch = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -45,9 +46,9 @@ public class SpiderInfo: MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
-            Debug.Log($"{other.gameObject.name}");
             ani.SetInteger("attack", ani.GetInteger("attack") + 1);
             script.speed = other.GetComponent<mineCartPath>().speed;
+            gameObject.transform.LookAt(other.transform.position);
             Invoke("Die", 1);
         }
     }
