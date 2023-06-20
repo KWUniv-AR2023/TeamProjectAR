@@ -20,7 +20,7 @@ public class BulletController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        head.transform.position += direction * 10;
+        head.transform.position += direction * 6;
     }
 
 
