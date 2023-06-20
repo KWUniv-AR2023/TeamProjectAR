@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR;
+using UnityEngine.XR.Interaction.Toolkit;
 
 [AddComponentMenu("Nokobot/Modern Guns/Simple Shoot")]
 public class SimpleShoot : MonoBehaviour
@@ -9,6 +11,8 @@ public class SimpleShoot : MonoBehaviour
     public GameObject bulletPrefab;
     public GameObject casingPrefab;
     public GameObject muzzleFlashPrefab;
+
+    //public XRController rightHandController;
 
     [Header("Location Refrences")]
     [SerializeField] private Animator gunAnimator;
@@ -21,7 +25,7 @@ public class SimpleShoot : MonoBehaviour
     [Tooltip("Casing Ejection Speed")] [SerializeField] private float ejectPower = 150f;
 
 
-    void Start()
+    public void Start()
     {
         if (barrelLocation == null)
             barrelLocation = transform;
@@ -30,20 +34,36 @@ public class SimpleShoot : MonoBehaviour
             gunAnimator = GetComponentInChildren<Animator>();
     }
 
-    void Update()
+    public void Update()
     {
         //If you want a different input, change it here
-        if (Input.GetButtonDown("Fire1"))
-        {
+        //if (rightHandController.inputDevice.TryGetFeatureValue(CommonUsages.triggerButton, out bool triggerButtonValue) && triggerButtonValue)
+        //{
+        //    Debug.Log("Shoot");
             //Calls animation on the gun that has the relevant animation events that will fire
-            gunAnimator.SetTrigger("Fire");
-        }
+        //    gunAnimator.SetTrigger("Fire");
+        //}
     }
 
-
-    //This function creates the bullet behavior
-    void Shoot()
+    public void shot() 
     {
+        //Debug.Log("Shoot");
+        gunAnimator.SetTrigger("Fire");
+    }
+    //This function creates the bullet behavior
+    public void Shoot()
+    {
+        // Create a bullet and add force on it in direction of the barrel
+        GameObject bulletObject = Instantiate(bulletPrefab, barrelLocation.position, barrelLocation.rotation);
+        bulletObject.tag = "Bullet";
+
+        Rigidbody bulletRigidbody = bulletObject.GetComponent<Rigidbody>();
+        if (bulletRigidbody != null)
+        {
+            bulletRigidbody.AddForce(barrelLocation.forward * shotPower);
+        }
+
+
         if (muzzleFlashPrefab)
         {
             //Create the muzzle flash
@@ -64,7 +84,7 @@ public class SimpleShoot : MonoBehaviour
     }
 
     //This function creates a casing at the ejection slot
-    void CasingRelease()
+    public void CasingRelease()
     {
         //Cancels function if ejection slot hasn't been set or there's no casing
         if (!casingExitLocation || !casingPrefab)
