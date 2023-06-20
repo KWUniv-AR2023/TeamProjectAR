@@ -31,7 +31,7 @@ public class BulletController : MonoBehaviour
 
                     break;
                 case "boss":
-
+                    CollisionWithBoss(other.gameObject);
                     break;
             }
 
@@ -43,14 +43,17 @@ public class BulletController : MonoBehaviour
 
     private void CollisionWithMonster(GameObject obj)
     {
-        var script = gameObject.GetComponent<SpiderInfo>();
+        var script = obj.GetComponent<SpiderInfo>();
         script.hp = script.hp - 34;
     }
 
 
     private void CollisionWithBoss(GameObject obj)
     {
-
+        var info = obj.GetComponent<BossController>();
+        var script = obj.GetComponent<mineCartPath>();
+        info.hp = info.hp - 25;
+        script.speed -= 0.1f;
     }
 
 }
