@@ -5,55 +5,24 @@ using UnityEngine;
 public class BulletController : MonoBehaviour
 {
 
-    bool isDetect = false;
-
+    Vector3 direction;
+    GameObject head;
     // Start is called before the first frame update
     void Start()
     {
-        
+        Destroy(gameObject, 3);
+        head = gameObject.transform.Find("UCP45 Bullet Head").gameObject;
+        var body = gameObject.transform.Find("45ACP Bullet_Casing");
+
+        direction = head.transform.position - body.transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-    }
-
-    public void OnTriggerEnter(Collider other)
-    {
-        if (!isDetect) // bullet
-        {
-            isDetect = true;
-            switch (other.transform.tag)
-            {
-                case "monster":
-                    CollisionWithMonster(other.gameObject);
-
-                    break;
-                case "boss":
-                    CollisionWithBoss(other.gameObject);
-                    break;
-            }
-
-
-
-            Destroy(gameObject);
-        }
-    }
-
-    private void CollisionWithMonster(GameObject obj)
-    {
-        var script = obj.GetComponent<SpiderInfo>();
-        script.hp = script.hp - 34;
+        head.transform.position += direction * 10;
     }
 
 
-    private void CollisionWithBoss(GameObject obj)
-    {
-        var info = obj.GetComponent<BossController>();
-        var script = obj.GetComponent<mineCartPath>();
-        info.hp = info.hp - 25;
-        script.speed -= 0.1f;
-    }
 
 }
