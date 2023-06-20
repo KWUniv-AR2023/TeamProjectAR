@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class NewBehaviourScript : MonoBehaviour
 {
@@ -27,10 +30,11 @@ public class NewBehaviourScript : MonoBehaviour
             {
                 case "monster":
                     CollisionWithMonster(other.gameObject);
-
                     break;
                 case "boss":
                     CollisionWithBoss(other.gameObject);
+                    break;
+                default:
                     break;
             }
 
@@ -52,6 +56,6 @@ public class NewBehaviourScript : MonoBehaviour
         var info = obj.GetComponent<BossController>();
         var script = obj.GetComponent<mineCartPath>();
         info.hp = info.hp - 25;
-        script.speed -= 0.1f;
+        script.speed -= 0.2f;
     }
 }
