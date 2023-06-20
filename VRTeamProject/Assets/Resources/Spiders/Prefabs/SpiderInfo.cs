@@ -20,7 +20,7 @@ public class SpiderInfo: MonoBehaviour
     void Update()
     {
         ani.SetInteger("hp", hp);
-        if(hp == 0)
+        if(hp <= 0)
         {
             Die();
         }

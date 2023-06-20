@@ -83,4 +83,14 @@ public class SpiderManager : MonoBehaviour
             GameTime = 0;
         }
     }
+
+    private void OnDestroy()
+    {
+        var mob = GameObject.FindGameObjectsWithTag("monster");
+        foreach (var m in mob)
+        {
+            m.gameObject.GetComponent<SpiderInfo>().hp = 0;
+        }
+    }
+
 }

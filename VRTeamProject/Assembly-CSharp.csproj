@@ -100,6 +100,7 @@
     <Compile Include="Assets\Crystal_Mine\Spline_Tool\Scripts\Math_Functions.cs" />
     <Compile Include="Assets\Weapon\PyroParticles\Prefab\Script\MeteorSwarmScript.cs" />
     <Compile Include="Assets\_Course Library\Scripts\Conditions\OnPull.cs" />
+    <Compile Include="Assets\BulletController.cs" />
     <Compile Include="Assets\_Course Library\Scripts\Actions\TeleportPlayer.cs" />
     <Compile Include="Assets\Weapon\PyroParticles\Prefab\Script\FireCollisionForwardScript.cs" />
     <Compile Include="Assets\_Course Library\Scripts\Actions\ManuallySelectObject.cs" />
