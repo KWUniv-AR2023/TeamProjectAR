@@ -46,10 +46,10 @@ public class SpiderManager : MonoBehaviour
 
             script.offset = new Vector3(
                 UnityEngine.Random.Range(0,1f),
-                UnityEngine.Random.Range(0,2f),
+                UnityEngine.Random.Range(0,1.5f),
                 UnityEngine.Random.Range(0,1f)
             );
-            script.speed = src.speed - 1f;
+            script.speed = src.speed + 1f;
             script.maxSpeed = src.maxSpeed+1f;
             script.minSpeed = src.minSpeed+1f;
 
@@ -60,7 +60,7 @@ public class SpiderManager : MonoBehaviour
             GameObject rail = src.GetCurrentRailObject();
             Vector3 path = rail.transform.position;
 
-            path.y -= 20;
+            path.y -= UnityEngine.Random.Range(20, 25);
             obj.transform.position = path;
 
             script.currentRailParent = src.currentRailParent;
@@ -83,4 +83,14 @@ public class SpiderManager : MonoBehaviour
             GameTime = 0;
         }
     }
+
+    private void OnDestroy()
+    {
+        var mob = GameObject.FindGameObjectsWithTag("monster");
+        foreach (var m in mob)
+        {
+            m.gameObject.GetComponent<SpiderInfo>().hp = 0;
+        }
+    }
+
 }
