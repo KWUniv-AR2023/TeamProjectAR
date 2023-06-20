@@ -16,7 +16,7 @@ public class GunShoot : MonoBehaviour
 
     private void Start()
     {
-        //xrController = GetComponent<XRController>();
+        rightHandController = GetComponent<XRController>();
         //rightControllerTransform = xrController.transform;
 
         bulletEffect = bulletImpact.GetComponent<ParticleSystem>();
