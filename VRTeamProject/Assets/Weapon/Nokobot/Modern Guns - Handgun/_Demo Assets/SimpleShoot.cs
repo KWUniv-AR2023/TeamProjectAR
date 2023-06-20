@@ -36,6 +36,7 @@ public class SimpleShoot : MonoBehaviour
 
     public void Update()
     {
+        barrelLocation = transform;
         //If you want a different input, change it here
         //if (rightHandController.inputDevice.TryGetFeatureValue(CommonUsages.triggerButton, out bool triggerButtonValue) && triggerButtonValue)
         //{
@@ -47,7 +48,6 @@ public class SimpleShoot : MonoBehaviour
 
     public void shot() 
     {
-        //Debug.Log("Shoot");
         gunAnimator.SetTrigger("Fire");
     }
     //This function creates the bullet behavior
